@@ -74,7 +74,7 @@ print(combined_head)
 for i in combined.head["Purpose"]:
     print(i)
 
-# Analysis- If we observe the purpose of these comapnies, there is a heavy usage of positive words or we can say that they are showing the optimism. The words such as Success, efficient, innovate, empower, non-volatile, fresh-thinking, optimized, loyalty, advanced, impactful, visionary, upward-trending are being used in these sentences. And there are very few or no negative words here, leading to overall high compound scores.
+# Analysis- If we observe the purpose of these companies, there is a heavy usage of positive words or we can say that they are showing the optimism. The words such as Success, efficient, innovate, empower, non-volatile, fresh-thinking, optimized, loyalty, advanced, impactful, visionary, upward-trending are being used in these sentences. And there are very few or no negative words here, leading to overall high compound scores.
 
 # Bottom 5 companies with lowest compouns score
 combined_tail = combined.tail(5)
@@ -84,4 +84,8 @@ print(combined_tail)
 for i in combined_tail["Purpose"]:
     print(i)
 
-# Analysis- There is no presence of strong postive words here. most of the words are neutral and the presence of the words "Killer", "Exploit", "Bleeding-edge" etc. might have caused occurance of negative impression overall, leading to negative or zero compound scores.
+# Analysis- There is no presence of strong positive words here. most of the words are neutral and the presence of the words "Killer", "Exploit", "Bleeding-edge" etc. might have caused occurrence of negative impression overall, leading to negative or zero compound scores.
+
+# combined entries
+results= pd.concat([combined_head,combined_tail])
+print(results)
